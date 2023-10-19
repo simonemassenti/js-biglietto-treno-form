@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <label for="name">
+            Inserisci il tuo nome
+            <input type="text" id="name">
+        </label>
+
+        <label for="km">
+            Inserisci i km che vuoi percorrere
+            <input type="number" id="km">
+        </label>
+
+
+        <label for="age">
+            Seleziona la tua categoria
+            <select id="age">
+                <option value=""></option>
+                <option value="adult">Maggiorenne</option>
+                <option value="underage">Minorenne</option>
+                <option value="elderly">Over 65</option>
+            </select>
+        </label>
+
+        <button id="send">INVIA</button>
+        <button id="clear">CANCELLA</button>
+    </div>
+
+    <div id="result">
+
+    </div>
+
+
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
