@@ -4,42 +4,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biglietto del treno</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div>
-        <label for="name">
-            Inserisci il tuo nome
-            <input type="text" id="name">
-        </label>
+    
+    <!-- wrapper -->
+    <div class="wrapper p-3">
+        <!-- Title -->
+        <h1 class="text-white fst-italic text-center">
+            Ferrovie dello stato
+        </h1>
+        <!-- Title -->
+        <!-- Conrainer -->
+        <div class="container">
+            <!-- Form -->
+            <div class="row pt-3 pb-3 border ms_bg-form">
+                <!-- Column Name -->
+                <div class="col-4 text-center">
+                    <!-- Name label -->
+                    <label for="name" class="fw-bold form-label">
+                        Nome e Cognome
+                        <!-- Input Name -->
+                        <input type="text" id="name" class="mt-2 border rounded-pill ps-2 form-control">
+                        <!-- /Input Name -->
+                    </label>
+                    <!-- /Name label -->
+                </div>
+                <!-- /Column Name -->
 
-        <label for="km">
-            Inserisci i km che vuoi percorrere
-            <input type="number" id="km">
-        </label>
+                <!-- Column km -->
+                <div class="col-4 text-center">
+                    <!-- Km Label -->
+                    <label for="km" class="fw-bold form-label">
+                        Inserisci i km che vuoi percorrere
+                        <!-- Input Km -->
+                        <input type="number" id="km" class="mt-2 border rounded-pill ps-2 form-control">
+                        <!-- /Input Km -->
+                    </label>
+                    <!-- /Km Label -->
+                </div>
+                <!-- /Column km -->
 
+                <!-- Column Age -->
+                <div class="col-4 text-center">
+                    <!-- Label Age -->
+                    <label for="age" class="fw-bold form-label">
+                        Seleziona la tua categoria
+                        <!-- Select Category Age -->
+                        <select id="age" class="mt-2 border rounded-pill ps-2 form-select">
+                            <!-- Option none -->
+                            <option value=""></option>
+                            <!-- Option none -->
+                            
+                            <!-- Option Adult -->
+                            <option value="adult">Maggiorenne</option>
+                            <!-- /Option Adult -->
 
-        <label for="age">
-            Seleziona la tua categoria
-            <select id="age">
-                <option value=""></option>
-                <option value="adult">Maggiorenne</option>
-                <option value="underage">Minorenne</option>
-                <option value="elderly">Over 65</option>
-            </select>
-        </label>
+                            <!-- Option Underage -->
+                            <option value="underage">Minorenne</option>
+                            <!-- /Option Underage -->
 
-        <button id="send">INVIA</button>
-        <button id="clear">CANCELLA</button>
+                            <!-- Option Elderly -->
+                            <option value="elderly">Over 65</option>
+                            <!-- /Option Elderly -->
+                        </select>
+                        <!-- /Select Category Age -->
+                    </label>
+                    <!-- /Label Age -->
+                </div>
+                <!-- /Column Age -->
+
+                <!-- Buttons -->
+                <div class="pt-3 text-center">
+                    <!-- Make ticket -->
+                    <button type="button" class="btn btn-light" id="send">GENERA</button>
+                    <!-- /Make ticket -->
+
+                    <!-- Clear Button -->
+                    <button type="button" class="btn btn-warning" id="clear">CANCELLA</button>
+                    <!-- /Clear Button -->
+                </div>
+                <!-- /Buttons -->
+            </div>
+            <!-- /Form -->
+            
+            <!-- Ticket -->
+            <div id="ticket" class="row mt-5 ms_ticket d-flex d-none justify-content-between">
+                <!-- Passenger Name Column -->
+                <div class="col-3 text-center ms_bg-gray pt-2 border border-dark">
+                    <h5> NOME PASSEGGERO </h5>
+                    
+                    <!-- Passenger Name -->
+                    <h4 id="passenger" class="text-uppercase mt-4"></h4>
+                </div>
+                <!-- /Passenger Name Column -->
+
+                <!-- Offer Column -->
+                <div class="col-2 text-center pt-2">
+                    <h5>Offerta</h5>
+                    
+                    <!-- Offer -->
+                    <p id="offer" class="mt-4"></p>
+                </div>
+                <!-- Offer Column -->
+
+                <!-- Carriage Column -->
+                <div class="col-2 text-center pt-2">
+                    <h5>Carrozza</h5>
+                    
+                    <!-- Carriage -->
+                    <p id="carriage" class="mt-4"></p>
+                </div>
+                <!-- Carriage Column -->
+
+                <!-- Column Place -->
+                <div class="col-2 text-center pt-2">
+                    <h5>Codice CP</h5>
+                    <!-- Place -->
+                    <p id="place" class="mt-4"></p>
+                </div>
+                <!-- /Column Place -->
+
+                <!-- Column Cost -->
+                <div class="col-2 text-center pt-2">
+                    <h5>Costo biglietto</h5>
+                    
+                    <!-- Cost -->
+                    <p id="cost" class="mt-4"></p>
+                </div>
+                <!-- /Column Cost -->
+            </div>
+            <!-- /Ticket -->
+        </div>
+        <!-- /Container -->
     </div>
-
-    <div id="result">
-
-    </div>
-
+    <!-- /wrapper -->
 
     <!-- Script JS -->
     <script src="js/script.js"></script>

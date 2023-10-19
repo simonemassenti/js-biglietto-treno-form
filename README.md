@@ -25,6 +25,8 @@ Calcolo del prezzo base moltiplicando il prezzo al km per il numero di kilometri
 
 Viene infine preparato il messaggio da visualizzare
 
+
+
 ### Output
 
 Viene stampato il messaggio
