@@ -27,7 +27,7 @@ sendBtn.addEventListener("click", function() {
     username = usernameElem.value;
     console.log(username);
     km = parseInt(kmElem.value);
-    console.log(km);
+    console.log(km, typeof km);
     age = ageElem.value;
     console.log(age);
 
@@ -62,9 +62,9 @@ sendBtn.addEventListener("click", function() {
     console.log(price, discount);
 
     // Clearing HTML input Elements
-    document.getElementById("name").value = "";
-    document.getElementById("km").value = "";
-    document.getElementById("age").value = "";
+    usernameElem.value = "";
+    kmElem.value = "";
+    ageElem.value = "";
 
     // String to Number
     discount = parseInt(discount);
@@ -76,9 +76,9 @@ sendBtn.addEventListener("click", function() {
 //Event listener on clear button click
 clearBtn.addEventListener("click", function() {
     //Clearing HTML input Elements
-    document.getElementById("name").value = "";
-    document.getElementById("km").value = "";
-    document.getElementById("age").value = "";
+    usernameElem.value = "";
+    kmElem.value = "";
+    ageElem.value = "";
     
     //Ticket Hiding
     visual.classList.add("d-none");
